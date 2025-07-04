@@ -1,157 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zeeshan Khan | Flutter Developer</title>
-  <style>
-    /* Color Scheme */
-    :root {
-      --primary: #0d253f;
-      --secondary: #1d8cf8;
-      --accent: #f5a623;
-      --background: #f4f7fa;
-      --text-dark: #2b3a42;
-      --text-light: #ffffff;
-      --card-bg: #ffffff;
-      --hover-shadow: rgba(13, 37, 63, 0.2);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--background); color: var(--text-dark); line-height: 1.6; }
-    a { color: var(--secondary); text-decoration: none; }
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--text-light);
-      padding: 3rem 1rem;
-      text-align: center;
-    }
-    .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem; }
-    nav { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; }
-    nav a { padding: 0.5rem 1rem; border-radius: 5px; transition: background 0.3s; }
-    nav a:hover { background: rgba(255, 255, 255, 0.2); }
-    .intro h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    .intro p { font-size: 1.2rem; margin-bottom: 1rem; }
-    .contact a { margin: 0 0.5rem; font-weight: bold; }
-    h2 { margin-top: 2.5rem; margin-bottom: 1rem; position: relative; display: inline-block; }
-    h2::after { content: ''; width: 50%; height: 3px; background: var(--accent); position: absolute; bottom: -5px; left: 0; }
-    .skills span { display: inline-block; background: var(--secondary); color: var(--text-light); padding: 0.5rem 1rem; margin: 0.3rem; border-radius: 30px; font-size: 0.9rem; transition: transform 0.3s; }
-    .skills span:hover { transform: translateY(-3px); }
-    .section { margin-bottom: 2.5rem; }
-    .project-card, .job, .edu { background: var(--card-bg); border-radius: 15px; box-shadow: 0 4px 10px var(--hover-shadow); padding: 1.5rem; margin-bottom: 1.5rem; }
-    .project-card h4, .job h3, .edu h3 { margin-bottom: 0.5rem; color: var(--secondary); }
-    .project-card p { margin-bottom: 0.8rem; }
-    .project-links a { margin-right: 1rem; font-size: 0.9rem; }
-    .date { font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; }
-    .job ul { list-style: disc inside; margin-left: 1rem; }
-    .projects { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
-    @media(min-width: 700px) { .projects { grid-template-columns: 1fr 1fr; } }
-    .footer { text-align: center; padding: 1.5rem 0; font-size: 0.9rem; color: #666; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Protection Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="#intro">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="security-logo.svg" alt="Security Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#platform">platform</a>
+            <a href="#solutions">solutions</a>
+            <a href="#company">company</a>
+            <a href="#support">support</a>
+        </div>
+        <button class="get-started">get started</button>
     </nav>
-    <div class="intro container" id="intro">
-      <h1>Zeeshan Khan</h1>
-      <p>Detail-oriented Flutter Developer with 1.5 years of experience in building high-performance, cross-platform applications.</p>
-      <div class="contact">
-        <a href="mailto:shaniniazi568@gmail.com">Email</a> |
-        <a href="tel:+923337783611">Call</a> |
-        <a href="https://www.linkedin.com/in/zeeshan-niazi-app-developer/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/ZK-NIAZI" target="_blank">GitHub</a>
-      </div>
-    </div>
-  </header>
-  <main class="container">
-    <section class="section skills" id="skills">
-      <h2>Essential Flutter Developer Skills</h2>
-      <div>
-        <span>Dart Programming</span><span>Flutter SDK</span><span>State Management (Bloc & Provider)</span><span>Widget Lifecycle</span>
-        <span>Responsive Design</span><span>RESTful API Integration</span><span>Firebase & Cloud Services</span><span>Local Storage (SQLite & Hive)</span>
-        <span>Animations & Transitions</span><span>Unit & Widget Testing</span><span>CI/CD</span><span>Version Control (Git)</span>
-        <span>UI/UX Best Practices</span><span>Dependency Injection</span><span>Error Handling & Debugging</span><span>Performance Optimization</span>
-        <span>Plugin & Native Integration</span><span>Accessibility Standards</span><span>Agile & Scrum Workflow</span>
-      </div>
-    </section>
-    <section class="section experience" id="experience">
-      <h2>Experience</h2>
-      <div class="job">
-        <h3>SPEEDFORCE DIGITAL — Associate Flutter Developer</h3>
-        <div class="date">03/2025 – Present | Lahore, Pakistan</div>
-        <ul>
-          <li>Built high-quality cross-platform mobile applications focusing on performance and clean architecture.</li>
-          <li>Collaborated with UI/UX designers to create responsive and appealing interfaces.</li>
-          <li>Integrated RESTful APIs, Firebase services, and third-party SDKs.</li>
-          <li>Managed end-to-end app lifecycle including Play Store and App Store deployments.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>Cyber Advance Solutions — Flutter Developer</h3>
-        <div class="date">06/2024 – 03/2025 | Lahore, Pakistan</div>
-        <ul>
-          <li>Developed and maintained high-performance mobile applications using Flutter and Dart.</li>
-          <li>Applied Bloc and Cubit for state management and app stability.</li>
-          <li>Integrated Firebase Authentication and REST APIs for secure data exchange.</li>
-          <li>Used Hive for offline storage, following SOLID principles for clean code.</li>
-        </ul>
-      </div>
-    </section>
-    <section class="section projects" id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project-card">
-          <h4>Qaider‑APP SFD</h4>
-          <p>Centralized customer review management—pulling reviews from Google Business Profile into Firebase, sending AI‑driven replies, deep‑link invites, tiered subscriptions, and sentiment analytics.</p>
-          <div class="project-links">
-            <a href="https://drive.google.com/file/d/1wSEsniZMW0MC9XoaKhj0t5rkuYyw49ZP/view?usp=sharing" target="_blank">Watch Video</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4>MAP Pakistan</h4>
-          <p>Role-based event management app offering tailored packages, interactive event views, and seamless payment integration.</p>
-          <div class="project-links">
-            <a href="https://play.google.com/store/apps/details?id=com.map.event&pcampaignid=web_share" target="_blank">Get it on Play Store</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4>DetailX CAS</h4>
-          <p>User-friendly car detailing and booking app with Google Maps integration for service discovery, reviews, and appointment booking.</p>
-          <div class="project-links">
-            <a href="https://drive.google.com/file/d/1HyoBs6upES5EcEYU-txpqV7_wInyMNee/view?usp=sharing" target="_blank">Watch Video</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4>Quickly Transfer CAS</h4>
-          <p>Car booking app for organizations with time‑specific bookings and real‑time driver-user tracking on maps.</p>
-          <div class="project-links">
-            <a href="https://drive.google.com/file/d/1IHsKg3DC7sjvQpjMFCTm58Ie5s95aDoR/view?usp=sharing" target="_blank">Watch Video</a>
-          </div>
-        </div>
-        <div class="project-card">
-          <h4>Molly App CAS</h4>
-          <p>Fitness companion app allowing users to register, select personalized fitness plans, and track progress.</p>
-          <div class="project-links">
-            <a href="https://drive.google.com/file/d/1X6hkeWN_j4LAomB22WJdZWY-NTMYxNRp/view?usp=sharing" target="_blank">Watch Video</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section education" id="education">
-      <h2>Education</h2>
-      <div class="edu">
-        <h3>BS Computer Science</h3>
-        <div class="date">University of Sargodha | 01/2021 – 01/2025</div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    &copy; 2025 Zeeshan Khan. All rights reserved.
-  </footer>
+
+    <main>
+        <section class="hero">
+            <div class="stats">
+                <div class="stat">+65k<span>startups use</span></div>
+                <div class="stat">+1.5b<span>gh data was protected</span></div>
+                <div class="stat">+300k<span>downloads</span></div>
+            </div>
+            
+            <h1 class="main-title">
+                <span>protect</span>
+                <span>your</span>
+                <span>data</span>
+            </h1>
+
+            <p class="hero-text">
+                we can guarding your data with utmost care,
+                empowering you with privacy everywhere
+            </p>
+
+            <div class="cta-buttons">
+                <button class="verify-btn">verify you're human</button>
+                <button class="demo-btn">try demo</button>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <p class="info-text">
+                By partnering with a security provider, a company can
+                significantly enhance the protection of its sensitive data. This
+                includes implementing robust encryption techniques, access
+                controls, and monitoring systems to safeguard against
+                unauthorized access, data breaches, and cyberattacks.
+            </p>
+        </section>
+
+        <section class="partners">
+            <div class="partner-logo"><img src="auth-logo.svg" alt="Auth"></div>
+            <div class="partner-logo"><img src="unity-logo.svg" alt="Unity"></div>
+            <div class="partner-logo"><img src="western-union-logo.svg" alt="Western Union"></div>
+            <div class="partner-logo"><img src="dropbox-logo.svg" alt="Dropbox"></div>
+        </section>
+
+        <section class="benefits">
+            <h2>Our Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Proactive Threat Detection and Response</h3>
+                    <p>Security providers continuously monitor network traffic, log files,
+                    and system activities to identify suspicious patterns or anomalies
+                    that may indicate a security breach.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Expertise and Industry Knowledge</h3>
+                    <p>Leverage our deep understanding of security protocols and industry best practices
+                    to protect your valuable data assets.</p>
+                </div>
+                <!-- Add more benefit cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <div class="background-animation"></div>
+    <script src="animations.js"></script>
 </body>
 </html>
